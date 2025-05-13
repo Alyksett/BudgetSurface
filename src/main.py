@@ -1,14 +1,13 @@
-import plotly.graph_objects as go
+from decimal import Decimal
 
-import pandas as pd
+from models.accounts import _401k
+from models.base import Portfolio
 
-# Read data from a csv
-z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv')
-
-fig = go.Figure(data=[go.Surface(z=z_data.values)])
-
-fig.update_layout(title=dict(text='Mt Bruno Elevation'), autosize=False,
-                  width=500, height=500,
-                  margin=dict(l=65, r=50, b=65, t=90))
-
-fig.show()
+if __name__ == "__main__":
+    NUM_YEARS = 3
+    
+    
+    _401k_account = _401k("401k", Decimal(0))
+    portfolio = Portfolio("Austin", [_401k_account])
+    portfolio.step(12*NUM_YEARS)
+    print(portfolio.accounts[0])
