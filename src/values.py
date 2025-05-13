@@ -1,9 +1,12 @@
-NET_PAY = 1000
+from decimal import Decimal
 
-_401k_LIMIT = 23500
+
+NET_PAY = Decimal(1000)
+
+_401k_LIMIT = Decimal(23500000)
 
 # COMPOUND INTEREST
 
-ANNUAL_INTEREST_RATE = 0.06
-NUM_COMPOUNDS = 12
-NUM_YEARS = 1
+ANNUAL_INTEREST_RATE: Decimal = Decimal(0.06)
+NUM_COMPOUNDS: Decimal = Decimal(1)
+NUM_YEARS: Decimal = Decimal(1)
