@@ -7,6 +7,6 @@ _401k_LIMIT = Decimal(23500000)
 
 # COMPOUND INTEREST
 
-ANNUAL_INTEREST_RATE: Decimal = Decimal(0.06)
+ANNUAL_INTEREST_RATE: Decimal = Decimal('0.06')
 NUM_COMPOUNDS: Decimal = Decimal(1)
 NUM_YEARS: Decimal = Decimal(1)
