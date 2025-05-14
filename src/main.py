@@ -40,7 +40,4 @@ if __name__ == "__main__":
         )
     high.step(NUM_MONTHS, high_check)
     
-    
-    # print(portfolio._401k)
-    # graph(portfolio._401k.balance_history)
     graph_two(low._401k.balance_history, high._401k.balance_history)
